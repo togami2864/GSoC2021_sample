@@ -1,5 +1,18 @@
 {
     "short_name":"Sample",
     "name":"Sample Diagnostics App for Chrome OS",
-    "start_url": "index.html"
+    "start_url": "index.html",
+    "icons": [
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+    "display": "standalone"
 }
