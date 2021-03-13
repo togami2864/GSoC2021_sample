@@ -7,17 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="manifest" href="./manifest.json">
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./service-worker.js')
-                .then(function (registration) {
-                    console.log('Registration successful, scope is:', registration.scope);
-                })
-                .catch(function (error) {
-                    console.log('Service worker registration failed, error:', error);
-                });
-        }
-    </script>
     <title>Sample Diagnostics App for Chrome OS</title>
 </head>
 
@@ -30,6 +19,7 @@
         <a href="./pages/system_diagnostics.html">System Diagnostics Manager</a>
         <a href="./pages/ststem_state.html">System State</a>
     </section>
+    <script src="/script.js" defer></script>
 </body>
 
 </html>
