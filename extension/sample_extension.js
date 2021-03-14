@@ -1,5 +1,5 @@
-const featchAPI = async () => {
+const fetchAPI = async () => {
   const result = await chrome.system;
   alert(result);
 };
-setInterval(feachAPI, 30000);
+setInterval(fetchAPI, 30000);
