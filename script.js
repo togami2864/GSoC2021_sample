@@ -32,3 +32,11 @@ window.addEventListener("appinstalled", (event) => {
   console.log("👍", "appinstalled", event);
   window.deferredPrompt = null;
 });
+
+chrome.runtime.sendMessage(
+  "chlajlmoagkkmmifopkeagclhjfaiddl",
+  message,
+  (responseMessage) => {
+    console.log(message);
+  }
+);
