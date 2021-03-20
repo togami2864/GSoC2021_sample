@@ -45,7 +45,8 @@ button.addEventListener("click", () => {
     },
     function (response) {
       console.log(response);
-      alert(response);
     }
   );
+  sendResponse();
+  return;
 });
