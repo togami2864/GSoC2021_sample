@@ -33,10 +33,22 @@ window.addEventListener("appinstalled", (event) => {
   window.deferredPrompt = null;
 });
 
-chrome.runtime.sendMessage(
-  "chlajlmoagkkmmifopkeagclhjfaiddl",
-  message,
-  (responseMessage) => {
-    console.log(message);
-  }
-);
+//送信
+const button = document.getElementById("send");
+const receiver = document.getElementById("recieve");
+button.addEventListener("click", () => {
+  var editorExtensionId = " cchlfodlokmandokbcbdnccndllpkiak";
+  chrome.runtime.sendMessage(
+    editorExtensionId,
+    { openUrlInEditor: url },
+    function (response) {
+      if (!response.success) handleError(url);
+    }
+  );
+});
+
+//受信
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  console.log(request.message);
+  receiver.innerHTML = "success!!";
+});
