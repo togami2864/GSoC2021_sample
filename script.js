@@ -34,19 +34,18 @@ window.addEventListener("appinstalled", (event) => {
 });
 
 //送信
-const button = document.getElementById("send");
-button.addEventListener("click", () => {
-  console.log("clicked");
-  var editorExtensionId = "cchlfodlokmandokbcbdnccndllpkiak";
-  chrome.runtime.sendMessage(
-    editorExtensionId,
-    {
-      message: "拡張からのメッセージ",
-    },
-    function (response) {
-      console.log(response);
-    }
-  );
-  sendResponse();
-  return;
-});
+// const button = document.getElementById("send");
+// button.addEventListener("click", () => {
+//   console.log("clicked");
+//   const editorExtensionId = "cchlfodlokmandokbcbdnccndllpkiak";
+//   chrome.runtime.sendMessage(
+//     editorExtensionId,
+//     {
+//       message: "拡張からのメッセージ",
+//     },
+//     function (response) {
+//       console.log(response);
+//     }
+//   );
+//   return;
+// });
