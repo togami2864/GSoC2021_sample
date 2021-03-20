@@ -37,7 +37,7 @@ window.addEventListener("appinstalled", (event) => {
 const button = document.getElementById("send");
 button.addEventListener("click", () => {
   console.log("clicked");
-  var editorExtensionId = " cchlfodlokmandokbcbdnccndllpkiak";
+  var editorExtensionId = "cchlfodlokmandokbcbdnccndllpkiak";
   const message = "アプリからのメッセージです";
   chrome.runtime.sendMessage(editorExtensionId, message);
 });
