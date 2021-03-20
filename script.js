@@ -38,6 +38,7 @@ const button = document.getElementById("send");
 button.addEventListener("click", () => {
   console.log("clicked");
   var editorExtensionId = "cchlfodlokmandokbcbdnccndllpkiak";
-  const message = "アプリからのメッセージです";
-  chrome.runtime.sendMessage(editorExtensionId, message);
+  chrome.runtime.sendMessage(editorExtensionId, {
+    message: "拡張からのメッセージ",
+  });
 });
