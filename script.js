@@ -45,7 +45,7 @@ button.addEventListener("click", () => {
     },
     function (response) {
       console.log(response);
-      return true;
+      alert(response);
     }
   );
 });
