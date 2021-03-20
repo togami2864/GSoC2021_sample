@@ -49,6 +49,9 @@ button.addEventListener("click", () => {
 
 //受信
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  console.log(request.message);
+  console.log("メッセージを拡張から取得しました。");
   receiver.innerHTML = "success!!";
+  sendResponse({
+    success: true,
+  });
 });
