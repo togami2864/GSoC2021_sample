@@ -37,14 +37,10 @@ window.addEventListener("appinstalled", (event) => {
 const button = document.getElementById("send");
 const receiver = document.getElementById("recieve");
 button.addEventListener("click", () => {
+  console.log("clicked");
   var editorExtensionId = " cchlfodlokmandokbcbdnccndllpkiak";
-  chrome.runtime.sendMessage(
-    editorExtensionId,
-    { openUrlInEditor: url },
-    function (response) {
-      if (!response.success) handleError(url);
-    }
-  );
+  const message = "アプリからのメッセージです";
+  chrome.runtime.sendMessage(editorExtensionId, message);
 });
 
 //受信
