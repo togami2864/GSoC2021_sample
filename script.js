@@ -38,7 +38,13 @@ const button = document.getElementById("send");
 button.addEventListener("click", () => {
   console.log("clicked");
   var editorExtensionId = "cchlfodlokmandokbcbdnccndllpkiak";
-  chrome.runtime.sendMessage(editorExtensionId, {
-    message: "拡張からのメッセージ",
-  });
+  chrome.runtime.sendMessage(
+    editorExtensionId,
+    {
+      message: "拡張からのメッセージ",
+    },
+    function (response) {
+      console.log(response);
+    }
+  );
 });
