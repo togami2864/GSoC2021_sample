@@ -35,5 +35,5 @@ window.addEventListener("appinstalled", (event) => {
 
 document.addEventListener("csEvent", function (event) {
   const data = event.detail;
-  console.log(data);
+  alert(data);
 });
