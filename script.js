@@ -33,19 +33,7 @@ window.addEventListener("appinstalled", (event) => {
   window.deferredPrompt = null;
 });
 
-//送信
-// const button = document.getElementById("send");
-// button.addEventListener("click", () => {
-//   console.log("clicked");
-//   const editorExtensionId = "cchlfodlokmandokbcbdnccndllpkiak";
-//   chrome.runtime.sendMessage(
-//     editorExtensionId,
-//     {
-//       message: "拡張からのメッセージ",
-//     },
-//     function (response) {
-//       console.log(response);
-//     }
-//   );
-//   return;
-// });
+document.addEventListener("csEvent", function (event) {
+  const data = event.detail;
+  alert(data);
+});
